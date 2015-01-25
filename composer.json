@@ -1,8 +1,8 @@
 {
-    "name": "streamlinesocial/norecaptcha-bundle",
+    "name": "streamlinesocial/NoRecaptchaBundle",
     "license": "MIT",
     "type": "project",
-    "description": "Adds form field for googles no-recaptchas",
+    "description": "Adds form field for Googles no CAPTCHA reCAPTCHA",
     "autoload": {
         "psr-0": { "StrSocial\\Bundle\\NoRecaptchaBundle\\": "" }
     },
