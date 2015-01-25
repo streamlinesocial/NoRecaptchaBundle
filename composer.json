@@ -1,0 +1,21 @@
+{
+    "name": "streamlinesocial/norecaptcha-bundle",
+    "license": "MIT",
+    "type": "project",
+    "description": "Adds form field for googles no-recaptchas",
+    "autoload": {
+        "psr-0": { "StrSocial\\Bundle\\NoRecaptchaBundle\\": "" }
+    },
+    "target-dir": "StrSocial/Bundle/NoRecaptchaBundle",
+    "minimum-stability": "dev",
+    "repositories": [ ],
+    "require": {
+        "php": ">=5.3.3",
+        "nietonfir/google-recaptcha": "~0.0"
+    },
+    "require-dev": { },
+    "scripts": { },
+    "config": { },
+    "extra": { }
+}
+

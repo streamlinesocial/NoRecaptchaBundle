@@ -1,0 +1,10 @@
+{% block no_recaptcha_widget %}
+
+    {% spaceless %}
+        <div class="g-recaptcha" data-sitekey="{{ form.vars.public_key }}"></div>
+    {% endspaceless %}
+
+    <script src="{{ form.vars.url_api }}" type="text/javascript"></script>
+
+{% endblock no_recaptcha_widget %}
+

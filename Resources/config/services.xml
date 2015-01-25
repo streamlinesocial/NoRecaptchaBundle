@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="str_social_no_recaptcha.form.type.class">StrSocial\Bundle\NoRecaptchaBundle\Form\Type\NoRecaptchaType</parameter>
+        <parameter key="str_social_no_recaptcha.validator.true.class">StrSocial\Bundle\NoRecaptchaBundle\Validator\Constraints\TrueValidator</parameter>
+    </parameters>
+
+    <services>
+        <service id="str_social_no_recaptcha.form.type" class="%str_social_no_recaptcha.form.type.class%">
+            <tag name="form.type" alias="no_recaptcha" />
+            <argument>%str_social_no_recaptcha.public_key%</argument>
+            <argument>%str_social_no_recaptcha.enabled%</argument>
+            <argument>%str_social_no_recaptcha.locale_key%</argument>
+        </service>
+
+        <service id="str_social_no_recaptcha.validator.true" class="%str_social_no_recaptcha.validator.true.class%">
+            <tag name="validator.constraint_validator" alias="no_recaptcha.true" />
+            <argument>%str_social_no_recaptcha.enabled%</argument>
+            <argument>%str_social_no_recaptcha.private_key%</argument>
+            <argument type="service" id="request_stack" />
+        </service>
+    </services>
+</container>
