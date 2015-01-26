@@ -16,6 +16,10 @@ app/config/config.yml
 Example usage
 =============
 
+    <?php
+    
+    use StrSocial\Bundle\NoRecaptchaBundle\Validator\Constraints\True;
+    
     $form = $this->createFormBuilder()
         ->add('recaptcha', 'no_recaptcha', array(
             'attr' => array(
