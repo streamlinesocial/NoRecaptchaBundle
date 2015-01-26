@@ -1,7 +1,11 @@
 {% block no_recaptcha_widget %}
 
     {% spaceless %}
-        <div class="g-recaptcha" data-sitekey="{{ form.vars.public_key }}"></div>
+        <div class="g-recaptcha" data-sitekey="{{ form.vars.public_key }}"
+            {% if form.vars.attr.options.theme is defined %} data-theme="{{ form.vars.attr.options.theme }}" {% endif %}
+            {% if form.vars.attr.options.callback is defined %} data-callback="{{ form.vars.attr.options.callback }}" {% endif %}
+            {% if form.vars.attr.options.type is defined %} data-type="{{ form.vars.attr.options.type }}" {% endif %}
+            ></div>
     {% endspaceless %}
 
     <script src="{{ form.vars.url_api }}" type="text/javascript"></script>
